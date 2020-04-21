@@ -4,10 +4,10 @@
     "mvc": "1.2",
     "name": "ExtendedCollisionFunctions",
     "IncludedResources": [
-        
+
     ],
     "androidPermissions": [
-        
+
     ],
     "androidProps": false,
     "androidactivityinject": "",
@@ -28,10 +28,10 @@
             "modelName": "GMExtensionFile",
             "mvc": "1.0",
             "ProxyFiles": [
-                
+
             ],
             "constants": [
-                
+
             ],
             "copyToTargets": -1,
             "filename": "ExtendedCollisionFunctions.gml",
@@ -43,10 +43,10 @@
                     "mvc": "1.0",
                     "argCount": -1,
                     "args": [
-                        
+
                     ],
                     "externalName": "place_meeting_ext",
-                    "help": "place_meeting_ext(x, y, obj, [suchthat])",
+                    "help": "place_meeting_ext(x, y, objs, [suchthat])",
                     "hidden": false,
                     "kind": 2,
                     "name": "place_meeting_ext",
@@ -58,7 +58,7 @@
                     "mvc": "1.0",
                     "argCount": -1,
                     "args": [
-                        
+
                     ],
                     "externalName": "__instance_is_instance_of_any__",
                     "help": "__instance_is_instance_of_any__(id, objs)",
@@ -73,7 +73,7 @@
                     "mvc": "1.0",
                     "argCount": -1,
                     "args": [
-                        
+
                     ],
                     "externalName": "collision_circle_ext",
                     "help": "collision_circle_ext(x, y, rad, objs, prec, notme, [suchthat])",
@@ -88,7 +88,7 @@
                     "mvc": "1.0",
                     "argCount": -1,
                     "args": [
-                        
+
                     ],
                     "externalName": "collision_circle_list_ext",
                     "help": "collision_circle_list_ext(x, y, rad, objs, prec, notme, list, ordered, [suchthat])",
@@ -103,10 +103,10 @@
                     "mvc": "1.0",
                     "argCount": -1,
                     "args": [
-                        
+
                     ],
                     "externalName": "collision_ellipse_ext",
-                    "help": "collision_ellipse_ext(x1, y1, x2, y2, xxx, yyy, objs, prec, notme, [suchthat])",
+                    "help": "collision_ellipse_ext(x1, y1, x2, y2, objs, prec, notme, [suchthat])",
                     "hidden": false,
                     "kind": 2,
                     "name": "collision_ellipse_ext",
@@ -118,7 +118,7 @@
                     "mvc": "1.0",
                     "argCount": -1,
                     "args": [
-                        
+
                     ],
                     "externalName": "collision_ellipse_list_ext",
                     "help": "collision_ellipse_list_ext(x1, y1, x2, y2, objs, prec, notme, list, ordered, [suchthat])",
@@ -133,10 +133,10 @@
                     "mvc": "1.0",
                     "argCount": -1,
                     "args": [
-                        
+
                     ],
                     "externalName": "collision_line_ext",
-                    "help": "collision_line_ext(x1, y1, x2, y2, xxx, yyy, objs, prec, notme, [suchthat])",
+                    "help": "collision_line_ext(x1, y1, x2, y2, objs, prec, notme, [suchthat])",
                     "hidden": false,
                     "kind": 2,
                     "name": "collision_line_ext",
@@ -148,7 +148,7 @@
                     "mvc": "1.0",
                     "argCount": -1,
                     "args": [
-                        
+
                     ],
                     "externalName": "collision_line_list_ext",
                     "help": "collision_line_list_ext(x1, y1, x2, y2, objs, prec, notme, list, ordered, [suchthat])",
@@ -163,7 +163,7 @@
                     "mvc": "1.0",
                     "argCount": -1,
                     "args": [
-                        
+
                     ],
                     "externalName": "collision_point_ext",
                     "help": "collision_point_ext(x, y, objs, prec, notme, [suchthat])",
@@ -178,7 +178,7 @@
                     "mvc": "1.0",
                     "argCount": -1,
                     "args": [
-                        
+
                     ],
                     "externalName": "collision_point_list_ext",
                     "help": "collision_point_list_ext(x, y, objs, prec, notme, list, ordered, [suchthat])",
@@ -193,10 +193,10 @@
                     "mvc": "1.0",
                     "argCount": -1,
                     "args": [
-                        
+
                     ],
                     "externalName": "collision_rectangle_ext",
-                    "help": "collision_rectangle_ext(x1, y1, x2, y2, xxx, yyy, objs, prec, notme, [suchthat])",
+                    "help": "collision_rectangle_ext(x1, y1, x2, y2, objs, prec, notme, [suchthat])",
                     "hidden": false,
                     "kind": 2,
                     "name": "collision_rectangle_ext",
@@ -208,7 +208,7 @@
                     "mvc": "1.0",
                     "argCount": -1,
                     "args": [
-                        
+
                     ],
                     "externalName": "collision_rectangle_list_ext",
                     "help": "collision_rectangle_list_ext(x1, y1, x2, y2, objs, prec, notme, list, ordered, [suchthat])",
@@ -223,10 +223,10 @@
                     "mvc": "1.0",
                     "argCount": -1,
                     "args": [
-                        
+
                     ],
                     "externalName": "instance_place_ext",
-                    "help": "instance_place_ext(x, y, obj, [suchthat])",
+                    "help": "instance_place_ext(x, y, objs, [suchthat])",
                     "hidden": false,
                     "kind": 2,
                     "name": "instance_place_ext",
@@ -238,7 +238,7 @@
                     "mvc": "1.0",
                     "argCount": -1,
                     "args": [
-                        
+
                     ],
                     "externalName": "instance_place_list_ext",
                     "help": "instance_place_list_ext(x, y, objs, list, ordered, [suchthat])",
@@ -253,10 +253,10 @@
                     "mvc": "1.0",
                     "argCount": -1,
                     "args": [
-                        
+
                     ],
                     "externalName": "instance_position_ext",
-                    "help": "instance_position_ext(x, y, obj, [suchthat])",
+                    "help": "instance_position_ext(x, y, objs, [suchthat])",
                     "hidden": false,
                     "kind": 2,
                     "name": "instance_position_ext",
@@ -268,7 +268,7 @@
                     "mvc": "1.0",
                     "argCount": -1,
                     "args": [
-                        
+
                     ],
                     "externalName": "instance_position_list_ext",
                     "help": "instance_position_list_ext(x, y, objs, list, ordered, [suchthat])",
@@ -283,10 +283,10 @@
                     "mvc": "1.0",
                     "argCount": -1,
                     "args": [
-                        
+
                     ],
                     "externalName": "position_meeting_ext",
-                    "help": "position_meeting_ext(x, y, obj, [suchthat])",
+                    "help": "position_meeting_ext(x, y, objs, [suchthat])",
                     "hidden": false,
                     "kind": 2,
                     "name": "position_meeting_ext",
@@ -323,10 +323,10 @@
     "installdir": "",
     "iosProps": false,
     "iosSystemFrameworkEntries": [
-        
+
     ],
     "iosThirdPartyFrameworkEntries": [
-        
+
     ],
     "iosdelegatename": "",
     "iosplistinject": "",
@@ -342,10 +342,10 @@
     "supportedTargets": -1,
     "tvosProps": false,
     "tvosSystemFrameworkEntries": [
-        
+
     ],
     "tvosThirdPartyFrameworkEntries": [
-        
+
     ],
     "tvosclassname": "",
     "tvosdelegatename": "",

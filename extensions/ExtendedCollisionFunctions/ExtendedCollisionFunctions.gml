@@ -169,12 +169,11 @@ for (var i = collision_circle_list(xx, yy, rad, objs, prec, notme, list, ordered
 return ds_list_size(list);
 
 #define collision_ellipse_ext
-///@func collision_ellipse_ext(x1, y1, x2, y2, xxx, yyy, objs, prec, notme, [suchthat])
+///@func collision_ellipse_ext(x1, y1, x2, y2, objs, prec, notme, [suchthat])
 ///@param x1 X position to start
 ///@param y1 Y position to start
 ///@param x2 X position to end
 ///@param y2 Y position to end
-///@param xxx, yyy xxx, yyyius to check
 ///@param objs Any object ID, instance ID, self, other, all, or an array of any of the preceding
 ///@param prec Whether to enable precise collisions
 ///@param notme Whether the calling instance should be excluded
@@ -323,12 +322,11 @@ for (var i = collision_ellipse_list(xx, yy, xxx, yyy, objs, prec, notme, list, o
 return ds_list_size(list);
 
 #define collision_line_ext
-///@func collision_line_ext(x1, y1, x2, y2, xxx, yyy, objs, prec, notme, [suchthat])
+///@func collision_line_ext(x1, y1, x2, y2, objs, prec, notme, [suchthat])
 ///@param x1 X position to start
 ///@param y1 Y position to start
 ///@param x2 X position to end
 ///@param y2 Y position to end
-///@param xxx, yyy xxx, yyyius to check
 ///@param objs Any object ID, instance ID, self, other, all, or an array of any of the preceding
 ///@param prec Whether to enable precise collisions
 ///@param notme Whether the calling instance should be excluded
@@ -622,12 +620,11 @@ for (var i = collision_point_list(xx, yy, objs, prec, notme, list, ordered)-1; i
 return ds_list_size(list);
 
 #define collision_rectangle_ext
-///@func collision_rectangle_ext(x1, y1, x2, y2, xxx, yyy, objs, prec, notme, [suchthat])
+///@func collision_rectangle_ext(x1, y1, x2, y2, objs, prec, notme, [suchthat])
 ///@param x1 X position to start
 ///@param y1 Y position to start
 ///@param x2 X position to end
 ///@param y2 Y position to end
-///@param xxx, yyy xxx, yyyius to check
 ///@param objs Any object ID, instance ID, self, other, all, or an array of any of the preceding
 ///@param prec Whether to enable precise collisions
 ///@param notme Whether the calling instance should be excluded
@@ -776,10 +773,10 @@ for (var i = collision_rectangle_list(xx, yy, xxx, yyy, objs, prec, notme, list,
 return ds_list_size(list);
 
 #define instance_place_ext
-///@func instance_place_ext(x, y, obj, [suchthat])
+///@func instance_place_ext(x, y, objs, [suchthat])
 ///@param x X position to place at
 ///@param y Y position to place at
-///@param obj Any object ID, instance ID, self, other, all, or an array of any of the preceding
+///@param objs Any object ID, instance ID, self, other, all, or an array of any of the preceding
 ///@param [suchthat] (optional) A 2-argument function, first for detected instance, second for calling instance, returning true/false; or a 2-entry array of a 3-argument function and the value to pass into the third argument
 
 // Capture arguments
@@ -915,10 +912,10 @@ for (var i = instance_place_list(xx, yy, objs, list, ordered)-1; i >= 0; --i) {
 return ds_list_size(list);
 
 #define instance_position_ext
-///@func instance_position_ext(x, y, obj, [suchthat])
+///@func instance_position_ext(x, y, objs, [suchthat])
 ///@param x X position to check
 ///@param y Y position to check
-///@param obj Any object ID, instance ID, self, other, all, or an array of any of the preceding
+///@param objs Any object ID, instance ID, self, other, all, or an array of any of the preceding
 ///@param [suchthat] (optional) A 2-argument function, first for detected instance, second for calling instance, returning true/false; or a 2-entry array of a 3-argument function and the value to pass into the third argument
 
 // Capture arguments
@@ -1050,10 +1047,10 @@ for (var i = instance_position_list(xx, yy, objs, list, ordered)-1; i >= 0; --i)
 return ds_list_size(list);
 
 #define place_meeting_ext
-///@func place_meeting_ext(x, y, obj, [suchthat])
+///@func place_meeting_ext(x, y, objs, [suchthat])
 ///@param x X position to place at
 ///@param y Y position to place at
-///@param obj Any object ID, instance ID, self, other, all, or an array of any of the preceding
+///@param objs Any object ID, instance ID, self, other, all, or an array of any of the preceding
 ///@param [suchthat] (optional) A 2-argument function, first for detected instance, second for calling instance, returning true/false; or a 2-entry array of a 3-argument function and the value to pass into the third argument
 
 // Capture arguments
@@ -1124,10 +1121,10 @@ with (objs) {
 return false;
 
 #define position_meeting_ext
-///@func position_meeting_ext(x, y, obj, [suchthat])
+///@func position_meeting_ext(x, y, objs, [suchthat])
 ///@param x X position to check
 ///@param y Y position to check
-///@param obj Any object ID, instance ID, self, other, all, or an array of any of the preceding
+///@param objs Any object ID, instance ID, self, other, all, or an array of any of the preceding
 ///@param [suchthat] (optional) A 2-argument function, first for detected instance, second for calling instance, returning true/false; or a 2-entry array of a 3-argument function and the value to pass into the third argument
 
 // Capture arguments
