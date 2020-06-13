@@ -7,12 +7,14 @@ for (var i = array_length_1d(argument1)-1; i >= 0; --i) {
 	switch (obji) {
 		case all: return true;
 		case noone: break;
+		/*
 		case other:
 			if (argument0 == other.id) return true;
 			break;
 		case self:
 			if (argument0 == id) return true;
 			break;
+		*/
 		default:
 			if (argument0 == obji || (object_exists(obji) && (argument0.object_index == obji || object_is_ancestor(argument0.object_index, obji)))) return true;
 	}
@@ -72,7 +74,7 @@ if (is_array(objs)) {
 				for (var i = 0; i < nObjs; ++i) {
 					with (objs[i]) {
 						if (notme && id == other.id) continue;
-						if (collision_circle(xx, yy, rad, id, prec, false) && script_execute(suchthatFunc, id, other.id, suchthatArg)) {
+						if (collision_circle(xx, yy, rad, id, prec, false) && (is_method(suchthatFunc) ? suchthatFunc(id, other.id, suchthatArg) : script_execute(suchthatFunc, id, other.id, suchthatArg))) {
 							return id;
 						}
 					}
@@ -90,7 +92,7 @@ if (noFilter) {
 // Single target with filter
 with (objs) {
 	if (notme && id == other.id) continue;
-	if (collision_circle(xx, yy, rad, id, prec, false) && script_execute(suchthatFunc, id, other.id, suchthatArg)) {
+	if (collision_circle(xx, yy, rad, id, prec, false) && (is_method(suchthatFunc) ? suchthatFunc(id, other.id, suchthatArg) : script_execute(suchthatFunc, id, other.id, suchthatArg))) {
 		return id;
 	}
 }
@@ -145,7 +147,7 @@ if (is_array(objs)) {
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
 		default: // Multiple targets
 			for (var i = collision_circle_list(xx, yy, rad, all, prec, notme, list, ordered)-1; i >= 0; --i) {
-				if (!(__instance_is_instance_of_any__(list[| i], objs) && (noFilter || script_execute(suchthatFunc, list[| i], id, suchthatArg)))) {
+				if (!(__instance_is_instance_of_any__(list[| i], objs) && (noFilter || (is_method(suchthatFunc) ? suchthatFunc(list[| i], id, suchthatArg) : script_execute(suchthatFunc, list[| i], id, suchthatArg))))) {
 					ds_list_delete(list, i);
 				}
 			}
@@ -160,7 +162,7 @@ if (noFilter) {
 
 // Single target with filter
 for (var i = collision_circle_list(xx, yy, rad, objs, prec, notme, list, ordered)-1; i >= 0; --i) {
-	if (!script_execute(suchthatFunc, list[| i], id, suchthatArg)) {
+	if (!(is_method(suchthatFunc) ? suchthatFunc(list[| i], id, suchthatArg) : script_execute(suchthatFunc, list[| i], id, suchthatArg))) {
 		ds_list_delete(list, i);
 	}
 }
@@ -223,7 +225,7 @@ if (is_array(objs)) {
 				for (var i = 0; i < nObjs; ++i) {
 					with (objs[i]) {
 						if (notme && id == other.id) continue;
-						if (collision_ellipse(xx, yy, xxx, yyy, id, prec, false) && script_execute(suchthatFunc, id, other.id, suchthatArg)) {
+						if (collision_ellipse(xx, yy, xxx, yyy, id, prec, false) && (is_method(suchthatFunc) ? suchthatFunc(id, other.id, suchthatArg) : script_execute(suchthatFunc, id, other.id, suchthatArg))) {
 							return id;
 						}
 					}
@@ -241,7 +243,7 @@ if (noFilter) {
 // Single target with filter
 with (objs) {
 	if (notme && id == other.id) continue;
-	if (collision_ellipse(xx, yy, xxx, yyy, id, prec, false) && script_execute(suchthatFunc, id, other.id, suchthatArg)) {
+	if (collision_ellipse(xx, yy, xxx, yyy, id, prec, false) && (is_method(suchthatFunc) ? suchthatFunc(id, other.id, suchthatArg) : script_execute(suchthatFunc, id, other.id, suchthatArg))) {
 		return id;
 	}
 }
@@ -298,7 +300,7 @@ if (is_array(objs)) {
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
 		default: // Multiple targets
 			for (var i = collision_ellipse_list(xx, yy, xxx, yyy, all, prec, notme, list, ordered)-1; i >= 0; --i) {
-				if (!(__instance_is_instance_of_any__(list[| i], objs) && (noFilter || script_execute(suchthatFunc, list[| i], id, suchthatArg)))) {
+				if (!(__instance_is_instance_of_any__(list[| i], objs) && (noFilter || (is_method(suchthatFunc) ? suchthatFunc(list[| i], id, suchthatArg) : script_execute(suchthatFunc, list[| i], id, suchthatArg))))) {
 					ds_list_delete(list, i);
 				}
 			}
@@ -313,7 +315,7 @@ if (noFilter) {
 
 // Single target with filter
 for (var i = collision_ellipse_list(xx, yy, xxx, yyy, objs, prec, notme, list, ordered)-1; i >= 0; --i) {
-	if (!script_execute(suchthatFunc, list[| i], id, suchthatArg)) {
+	if (!(is_method(suchthatFunc) ? suchthatFunc(list[| i], id, suchthatArg) : script_execute(suchthatFunc, list[| i], id, suchthatArg))) {
 		ds_list_delete(list, i);
 	}
 }
@@ -376,7 +378,7 @@ if (is_array(objs)) {
 				for (var i = 0; i < nObjs; ++i) {
 					with (objs[i]) {
 						if (notme && id == other.id) continue;
-						if (collision_line(xx, yy, xxx, yyy, id, prec, false) && script_execute(suchthatFunc, id, other.id, suchthatArg)) {
+						if (collision_line(xx, yy, xxx, yyy, id, prec, false) && (is_method(suchthatFunc) ? suchthatFunc(id, other.id, suchthatArg) : script_execute(suchthatFunc, id, other.id, suchthatArg))) {
 							return id;
 						}
 					}
@@ -394,7 +396,7 @@ if (noFilter) {
 // Single target with filter
 with (objs) {
 	if (notme && id == other.id) continue;
-	if (collision_line(xx, yy, xxx, yyy, id, prec, false) && script_execute(suchthatFunc, id, other.id, suchthatArg)) {
+	if (collision_line(xx, yy, xxx, yyy, id, prec, false) && (is_method(suchthatFunc) ? suchthatFunc(id, other.id, suchthatArg) : script_execute(suchthatFunc, id, other.id, suchthatArg))) {
 		return id;
 	}
 }
@@ -451,7 +453,7 @@ if (is_array(objs)) {
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
 		default: // Multiple targets
 			for (var i = collision_line_list(xx, yy, xxx, yyy, all, prec, notme, list, ordered)-1; i >= 0; --i) {
-				if (!(__instance_is_instance_of_any__(list[| i], objs) && (noFilter || script_execute(suchthatFunc, list[| i], id, suchthatArg)))) {
+				if (!(__instance_is_instance_of_any__(list[| i], objs) && (noFilter || (is_method(suchthatFunc) ? suchthatFunc(list[| i], id, suchthatArg) : script_execute(suchthatFunc, list[| i], id, suchthatArg))))) {
 					ds_list_delete(list, i);
 				}
 			}
@@ -466,7 +468,7 @@ if (noFilter) {
 
 // Single target with filter
 for (var i = collision_line_list(xx, yy, xxx, yyy, objs, prec, notme, list, ordered)-1; i >= 0; --i) {
-	if (!script_execute(suchthatFunc, list[| i], id, suchthatArg)) {
+	if (!(is_method(suchthatFunc) ? suchthatFunc(list[| i], id, suchthatArg) : script_execute(suchthatFunc, list[| i], id, suchthatArg))) {
 		ds_list_delete(list, i);
 	}
 }
@@ -525,7 +527,7 @@ if (is_array(objs)) {
 				for (var i = 0; i < nObjs; ++i) {
 					with (objs[i]) {
 						if (notme && id == other.id) continue;
-						if (collision_point(xx, yy, id, prec, false) && script_execute(suchthatFunc, id, other.id, suchthatArg)) {
+						if (collision_point(xx, yy, id, prec, false) && (is_method(suchthatFunc) ? suchthatFunc(id, other.id, suchthatArg) : script_execute(suchthatFunc, id, other.id, suchthatArg))) {
 							return id;
 						}
 					}
@@ -543,7 +545,7 @@ if (noFilter) {
 // Single target with filter
 with (objs) {
 	if (notme && id == other.id) continue;
-	if (collision_point(xx, yy, id, prec, false) && script_execute(suchthatFunc, id, other.id, suchthatArg)) {
+	if (collision_point(xx, yy, id, prec, false) && (is_method(suchthatFunc) ? suchthatFunc(id, other.id, suchthatArg) : script_execute(suchthatFunc, id, other.id, suchthatArg))) {
 		return id;
 	}
 }
@@ -596,7 +598,7 @@ if (is_array(objs)) {
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
 		default: // Multiple targets
 			for (var i = collision_point_list(xx, yy, all, prec, notme, list, ordered)-1; i >= 0; --i) {
-				if (!(__instance_is_instance_of_any__(list[| i], objs) && (noFilter || script_execute(suchthatFunc, list[| i], id, suchthatArg)))) {
+				if (!(__instance_is_instance_of_any__(list[| i], objs) && (noFilter || (is_method(suchthatFunc) ? suchthatFunc(list[| i], id, suchthatArg) : script_execute(suchthatFunc, list[| i], id, suchthatArg))))) {
 					ds_list_delete(list, i);
 				}
 			}
@@ -611,7 +613,7 @@ if (noFilter) {
 
 // Single target with filter
 for (var i = collision_point_list(xx, yy, objs, prec, notme, list, ordered)-1; i >= 0; --i) {
-	if (!script_execute(suchthatFunc, list[| i], id, suchthatArg)) {
+	if (!(is_method(suchthatFunc) ? suchthatFunc(list[| i], id, suchthatArg) : script_execute(suchthatFunc, list[| i], id, suchthatArg))) {
 		ds_list_delete(list, i);
 	}
 }
@@ -674,7 +676,7 @@ if (is_array(objs)) {
 				for (var i = 0; i < nObjs; ++i) {
 					with (objs[i]) {
 						if (notme && id == other.id) continue;
-						if (collision_rectangle(xx, yy, xxx, yyy, id, prec, false) && script_execute(suchthatFunc, id, other.id, suchthatArg)) {
+						if (collision_rectangle(xx, yy, xxx, yyy, id, prec, false) && (is_method(suchthatFunc) ? suchthatFunc(id, other.id, suchthatArg) : script_execute(suchthatFunc, id, other.id, suchthatArg))) {
 							return id;
 						}
 					}
@@ -692,7 +694,7 @@ if (noFilter) {
 // Single target with filter
 with (objs) {
 	if (notme && id == other.id) continue;
-	if (collision_rectangle(xx, yy, xxx, yyy, id, prec, false) && script_execute(suchthatFunc, id, other.id, suchthatArg)) {
+	if (collision_rectangle(xx, yy, xxx, yyy, id, prec, false) && (is_method(suchthatFunc) ? suchthatFunc(id, other.id, suchthatArg) : script_execute(suchthatFunc, id, other.id, suchthatArg))) {
 		return id;
 	}
 }
@@ -749,7 +751,7 @@ if (is_array(objs)) {
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
 		default: // Multiple targets
 			for (var i = collision_rectangle_list(xx, yy, xxx, yyy, all, prec, notme, list, ordered)-1; i >= 0; --i) {
-				if (!(__instance_is_instance_of_any__(list[| i], objs) && (noFilter || script_execute(suchthatFunc, list[| i], id, suchthatArg)))) {
+				if (!(__instance_is_instance_of_any__(list[| i], objs) && (noFilter || (is_method(suchthatFunc) ? suchthatFunc(list[| i], id, suchthatArg) : script_execute(suchthatFunc, list[| i], id, suchthatArg))))) {
 					ds_list_delete(list, i);
 				}
 			}
@@ -764,7 +766,7 @@ if (noFilter) {
 
 // Single target with filter
 for (var i = collision_rectangle_list(xx, yy, xxx, yyy, objs, prec, notme, list, ordered)-1; i >= 0; --i) {
-	if (!script_execute(suchthatFunc, list[| i], id, suchthatArg)) {
+	if (!(is_method(suchthatFunc) ? suchthatFunc(list[| i], id, suchthatArg) : script_execute(suchthatFunc, list[| i], id, suchthatArg))) {
 		ds_list_delete(list, i);
 	}
 }
@@ -820,7 +822,7 @@ if (is_array(objs)) {
 					dy = y-yy;
 				for (var i = 0; i < nObjs; ++i) {
 					with (objs[i]) {
-						if (place_meeting(x+dx, y+dy, other) && script_execute(suchthatFunc, id, other.id, suchthatArg)) {
+						if (place_meeting(x+dx, y+dy, other) && (is_method(suchthatFunc) ? suchthatFunc(id, other.id, suchthatArg) : script_execute(suchthatFunc, id, other.id, suchthatArg))) {
 							return id;
 						}
 					}
@@ -839,7 +841,7 @@ if (noFilter) {
 var dx = x-xx,
 	dy = y-yy;
 with (objs) {
-	if (place_meeting(x+dx, y+dy, other) && script_execute(suchthatFunc, id, other.id, suchthatArg)) {
+	if (place_meeting(x+dx, y+dy, other) && (is_method(suchthatFunc) ? suchthatFunc(id, other.id, suchthatArg) : script_execute(suchthatFunc, id, other.id, suchthatArg))) {
 		return id;
 	}
 }
@@ -888,7 +890,7 @@ if (is_array(objs)) {
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
 		default: // Multiple targets
 			for (var i = instance_place_list(xx, yy, all, list, ordered)-1; i >= 0; --i) {
-				if (!(__instance_is_instance_of_any__(list[| i], objs) && (noFilter || script_execute(suchthatFunc, list[| i], id, suchthatArg)))) {
+				if (!(__instance_is_instance_of_any__(list[| i], objs) && (noFilter || (is_method(suchthatFunc) ? suchthatFunc(list[| i], id, suchthatArg) : script_execute(suchthatFunc, list[| i], id, suchthatArg))))) {
 					ds_list_delete(list, i);
 				}
 			}
@@ -903,7 +905,7 @@ if (noFilter) {
 
 // Single target with filter
 for (var i = instance_place_list(xx, yy, objs, list, ordered)-1; i >= 0; --i) {
-	if (!script_execute(suchthatFunc, list[| i], id, suchthatArg)) {
+	if (!(is_method(suchthatFunc) ? suchthatFunc(list[| i], id, suchthatArg) : script_execute(suchthatFunc, list[| i], id, suchthatArg))) {
 		ds_list_delete(list, i);
 	}
 }
@@ -957,7 +959,7 @@ if (is_array(objs)) {
 			} else {
 				for (var i = 0; i < nObjs; ++i) {
 					with (objs[i]) {
-						if (position_meeting(xx, yy, id) && script_execute(suchthatFunc, id, other.id, suchthatArg)) {
+						if (position_meeting(xx, yy, id) && (is_method(suchthatFunc) ? suchthatFunc(id, other.id, suchthatArg) : script_execute(suchthatFunc, id, other.id, suchthatArg))) {
 							return id;
 						}
 					}
@@ -974,7 +976,7 @@ if (noFilter) {
 
 // Single target with filter
 with (objs) {
-	if (position_meeting(xx, yy, id) && script_execute(suchthatFunc, id, other.id, suchthatArg)) {
+	if (position_meeting(xx, yy, id) && (is_method(suchthatFunc) ? suchthatFunc(id, other.id, suchthatArg) : script_execute(suchthatFunc, id, other.id, suchthatArg))) {
 		return id;
 	}
 }
@@ -1023,7 +1025,7 @@ if (is_array(objs)) {
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
 		default: // Multiple targets
 			for (var i = instance_position_list(xx, yy, all, list, ordered)-1; i >= 0; --i) {
-				if (!(__instance_is_instance_of_any__(list[| i], objs) && (noFilter || script_execute(suchthatFunc, list[| i], id, suchthatArg)))) {
+				if (!(__instance_is_instance_of_any__(list[| i], objs) && (noFilter || (is_method(suchthatFunc) ? suchthatFunc(list[| i], id, suchthatArg) : script_execute(suchthatFunc, list[| i], id, suchthatArg))))) {
 					ds_list_delete(list, i);
 				}
 			}
@@ -1038,7 +1040,7 @@ if (noFilter) {
 
 // Single target with filter
 for (var i = instance_position_list(xx, yy, objs, list, ordered)-1; i >= 0; --i) {
-	if (!script_execute(suchthatFunc, list[| i], id, suchthatArg)) {
+	if (!(is_method(suchthatFunc) ? suchthatFunc(list[| i], id, suchthatArg) : script_execute(suchthatFunc, list[| i], id, suchthatArg))) {
 		ds_list_delete(list, i);
 	}
 }
@@ -1093,7 +1095,7 @@ if (is_array(objs)) {
 					dy = y-yy;
 				for (var i = 0; i < nObjs; ++i) {
 					with (objs[i]) {
-						if (place_meeting(x+dx, y+dy, other) && script_execute(suchthatFunc, id, other.id, suchthatArg)) {
+						if (place_meeting(x+dx, y+dy, other) && (is_method(suchthatFunc) ? suchthatFunc(id, other.id, suchthatArg) : script_execute(suchthatFunc, id, other.id, suchthatArg))) {
 							return true;
 						}
 					}
@@ -1112,7 +1114,7 @@ if (noFilter) {
 var dx = x-xx,
 	dy = y-yy;
 with (objs) {
-	if (place_meeting(x+dx, y+dy, other) && script_execute(suchthatFunc, id, other.id, suchthatArg)) {
+	if (place_meeting(x+dx, y+dy, other) && (is_method(suchthatFunc) ? suchthatFunc(id, other.id, suchthatArg) : script_execute(suchthatFunc, id, other.id, suchthatArg))) {
 		return true;
 	}
 }
@@ -1165,7 +1167,7 @@ if (is_array(objs)) {
 			} else {
 				for (var i = 0; i < nObjs; ++i) {
 					with (objs[i]) {
-						if (position_meeting(xx, yy, id) && script_execute(suchthatFunc, id, other.id, suchthatArg)) {
+						if (position_meeting(xx, yy, id) && (is_method(suchthatFunc) ? suchthatFunc(id, other.id, suchthatArg) : script_execute(suchthatFunc, id, other.id, suchthatArg))) {
 							return true;
 						}
 					}
@@ -1182,7 +1184,7 @@ if (noFilter) {
 
 // Single target with filter
 with (objs) {
-	if (position_meeting(xx, yy, id) && script_execute(suchthatFunc, id, other.id, suchthatArg)) {
+	if (position_meeting(xx, yy, id) && (is_method(suchthatFunc) ? suchthatFunc(id, other.id, suchthatArg) : script_execute(suchthatFunc, id, other.id, suchthatArg))) {
 		return true;
 	}
 }

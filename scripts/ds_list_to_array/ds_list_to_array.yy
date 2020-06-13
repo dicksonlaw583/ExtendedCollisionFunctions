@@ -1,8 +1,12 @@
 {
-    "id": "25efccdc-c412-498a-ae9f-c1a77226a85c",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "ds_list_to_array",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "ExtendedCollisionFunctions_test",
+    "path": "folders/Scripts/ExtendedCollisionFunctions_test.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "ds_list_to_array",
+  "tags": [],
+  "resourceType": "GMScript",
 }

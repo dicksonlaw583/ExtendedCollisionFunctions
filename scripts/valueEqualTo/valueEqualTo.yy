@@ -1,8 +1,12 @@
 {
-    "id": "82bca2fc-696f-45db-b0ae-76a2abde640d",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "valueEqualTo",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "ExtendedCollisionFunctions_test",
+    "path": "folders/Scripts/ExtendedCollisionFunctions_test.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "valueEqualTo",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,4 +1,9 @@
 ///@func valueEqualToMe(this, that)
 ///@param this
 ///@param that
-return argument[0].value == argument[1].value;
+function valueEqualToMe() {
+	return argument[0].value == argument[1].value;
+
+
+
+}
