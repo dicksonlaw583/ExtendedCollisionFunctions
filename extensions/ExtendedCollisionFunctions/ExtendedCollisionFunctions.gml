@@ -774,6 +774,192 @@ for (var i = collision_rectangle_list(xx, yy, xxx, yyy, objs, prec, notme, list,
 // Return collision size
 return ds_list_size(list);
 
+#define instance_furthest_ext
+///@func instance_furthest_ext(x, y, objs, [suchthat])
+///@param x X position to check
+///@param y Y position to check
+///@param objs Any object ID, instance ID, self, other, all, or an array of any of the preceding
+///@param [suchthat] (optional) A 2-argument function, first for detected instance, second for calling instance, returning true/false; or a 2-entry array of a 3-argument function and the value to pass into the third argument
+
+// Capture arguments
+var xx, yy, objs;
+var suchthatFunc = undefined,
+	suchthatArg = undefined;
+switch (argument_count) {
+	case 4:
+		suchthatFunc = argument[3];
+		if (is_array(suchthatFunc)) {
+			suchthatArg = suchthatFunc[1];
+			suchthatFunc = suchthatFunc[0];
+		}
+	case 3:
+		xx = argument[0];
+		yy = argument[1];
+		objs = argument[2];
+		break;
+	default:
+		show_error("Expected 3 or 4 arguments, got " + string(argument_count) + ".", true);
+		exit;
+}
+var noFilter = is_undefined(suchthatFunc);
+
+// Nothing is best for now
+var furthestInst = noone,
+	furthestDist = undefined,
+	currentInst = noone,
+	currentDist = undefined;
+
+// Array for targets
+if (is_array(objs)) {
+	var nObjs = array_length_1d(objs);
+	switch (nObjs) {
+		case 0: return noone; // No targets, no collisions
+		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
+		default: // Multiple targets; place the targets backwards and check collisions that way
+			if (noFilter) {
+				for (var i = 0; i < nObjs; ++i) {
+					currentInst = instance_furthest(xx, yy, objs[i]);
+					with (currentInst) currentDist = distance_to_point(xx, yy);
+					if (furthestInst == noone || currentDist > furthestDist) {
+						furthestInst = currentInst;
+						furthestDist = currentDist;
+					}
+				}
+			} else {
+				var dx = x-xx,
+					dy = y-yy;
+				for (var i = 0; i < nObjs; ++i) {
+					with (objs[i]) {
+						if (is_method(suchthatFunc) ? suchthatFunc(id, other.id, suchthatArg) : script_execute(suchthatFunc, id, other.id, suchthatArg)) {
+							currentInst = id;
+							currentDist = distance_to_point(xx, yy);
+							if (furthestInst == noone || currentDist > furthestDist) {
+								furthestInst = currentInst;
+								furthestDist = currentDist;
+							}
+						}
+					}
+				}
+			}
+			return furthestInst;
+	}
+}
+
+// Single target, no filter
+if (noFilter) {
+	return instance_furthest(xx, yy, objs);
+}
+
+// Single target with filter; place backwards and check collisions
+var dx = x-xx,
+	dy = y-yy;
+with (objs) {
+	if (is_method(suchthatFunc) ? suchthatFunc(id, other.id, suchthatArg) : script_execute(suchthatFunc, id, other.id, suchthatArg)) {
+		currentInst = id;
+		currentDist = distance_to_point(xx, yy);
+		if (furthestInst == noone || currentDist > furthestDist) {
+			furthestInst = currentInst;
+			furthestDist = currentDist;
+		}
+	}
+}
+
+// Return furthest
+return furthestInst;
+
+#define instance_nearest_ext
+///@func instance_nearest_ext(x, y, objs, [suchthat])
+///@param x X position to check
+///@param y Y position to check
+///@param objs Any object ID, instance ID, self, other, all, or an array of any of the preceding
+///@param [suchthat] (optional) A 2-argument function, first for detected instance, second for calling instance, returning true/false; or a 2-entry array of a 3-argument function and the value to pass into the third argument
+
+// Capture arguments
+var xx, yy, objs;
+var suchthatFunc = undefined,
+	suchthatArg = undefined;
+switch (argument_count) {
+	case 4:
+		suchthatFunc = argument[3];
+		if (is_array(suchthatFunc)) {
+			suchthatArg = suchthatFunc[1];
+			suchthatFunc = suchthatFunc[0];
+		}
+	case 3:
+		xx = argument[0];
+		yy = argument[1];
+		objs = argument[2];
+		break;
+	default:
+		show_error("Expected 3 or 4 arguments, got " + string(argument_count) + ".", true);
+		exit;
+}
+var noFilter = is_undefined(suchthatFunc);
+
+// Nothing is best for now
+var nearestInst = noone,
+	nearestDist = undefined,
+	currentInst = noone,
+	currentDist = undefined;
+
+// Array for targets
+if (is_array(objs)) {
+	var nObjs = array_length_1d(objs);
+	switch (nObjs) {
+		case 0: return noone; // No targets, no collisions
+		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
+		default: // Multiple targets; place the targets backwards and check collisions that way
+			if (noFilter) {
+				for (var i = 0; i < nObjs; ++i) {
+					currentInst = instance_nearest(xx, yy, objs[i]);
+					with (currentInst) currentDist = distance_to_point(xx, yy);
+					if (nearestInst == noone || currentDist < nearestDist) {
+						nearestInst = currentInst;
+						nearestDist = currentDist;
+					}
+				}
+			} else {
+				var dx = x-xx,
+					dy = y-yy;
+				for (var i = 0; i < nObjs; ++i) {
+					with (objs[i]) {
+						if (is_method(suchthatFunc) ? suchthatFunc(id, other.id, suchthatArg) : script_execute(suchthatFunc, id, other.id, suchthatArg)) {
+							currentInst = id;
+							currentDist = distance_to_point(xx, yy);
+							if (nearestInst == noone || currentDist < nearestDist) {
+								nearestInst = currentInst;
+								nearestDist = currentDist;
+							}
+						}
+					}
+				}
+			}
+			return nearestInst;
+	}
+}
+
+// Single target, no filter
+if (noFilter) {
+	return instance_nearest(xx, yy, objs);
+}
+
+// Single target with filter; place backwards and check collisions
+var dx = x-xx,
+	dy = y-yy;
+with (objs) {
+	if (is_method(suchthatFunc) ? suchthatFunc(id, other.id, suchthatArg) : script_execute(suchthatFunc, id, other.id, suchthatArg)) {
+		currentInst = id;
+		currentDist = distance_to_point(xx, yy);
+		if (nearestInst == noone || currentDist < nearestDist) {
+			nearestInst = currentInst;
+			nearestDist = currentDist;
+		}
+	}
+}
+
+// Return nearest
+return nearestInst;
+
 #define instance_place_ext
 ///@func instance_place_ext(x, y, objs, [suchthat])
 ///@param x X position to place at
