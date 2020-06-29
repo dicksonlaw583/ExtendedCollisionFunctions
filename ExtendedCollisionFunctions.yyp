@@ -11,9 +11,9 @@
     {"id":{"name":"pobjTarget","path":"objects/pobjTarget/pobjTarget.yy",},"order":1,},
     {"id":{"name":"objTarget1","path":"objects/objTarget1/objTarget1.yy",},"order":2,},
     {"id":{"name":"objTarget2","path":"objects/objTarget2/objTarget2.yy",},"order":3,},
+    {"id":{"name":"GMAssert","path":"extensions/GMAssert/GMAssert.yy",},"order":2,},
     {"id":{"name":"objTarget3","path":"objects/objTarget3/objTarget3.yy",},"order":4,},
     {"id":{"name":"rmTest","path":"rooms/rmTest/rmTest.yy",},"order":0,},
-    {"id":{"name":"GMAssert","path":"extensions/GMAssert/GMAssert.yy",},"order":0,},
     {"id":{"name":"ExtendedCollisionFunctions","path":"extensions/ExtendedCollisionFunctions/ExtendedCollisionFunctions.yy",},"order":1,},
   ],
   "Options": [
