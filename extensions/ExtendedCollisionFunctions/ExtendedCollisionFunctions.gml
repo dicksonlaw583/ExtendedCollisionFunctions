@@ -2,7 +2,7 @@
 ///@func __instance_is_instance_of_any__(id, objs)
 ///@param id The ID of the instance
 ///@param objs Array of object identities
-for (var i = array_length_1d(argument1)-1; i >= 0; --i) {
+for (var i = array_length(argument1)-1; i >= 0; --i) {
 	var obji = argument1[i];
 	switch (obji) {
 		case all: return true;
@@ -58,7 +58,7 @@ var noFilter = is_undefined(suchthatFunc);
 
 // Array for targets
 if (is_array(objs)) {
-	var nObjs = array_length_1d(objs);
+	var nObjs = array_length(objs);
 	switch (nObjs) {
 		case 0: return noone; // No targets, no collisions
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
@@ -141,7 +141,7 @@ var noFilter = is_undefined(suchthatFunc);
 
 // Array for targets
 if (is_array(objs)) {
-	var nObjs = array_length_1d(objs);
+	var nObjs = array_length(objs);
 	switch (nObjs) {
 		case 0: return 0; // No targets, no collisions
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
@@ -209,7 +209,7 @@ var noFilter = is_undefined(suchthatFunc);
 
 // Array for targets
 if (is_array(objs)) {
-	var nObjs = array_length_1d(objs);
+	var nObjs = array_length(objs);
 	switch (nObjs) {
 		case 0: return noone; // No targets, no collisions
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
@@ -294,7 +294,7 @@ var noFilter = is_undefined(suchthatFunc);
 
 // Array for targets
 if (is_array(objs)) {
-	var nObjs = array_length_1d(objs);
+	var nObjs = array_length(objs);
 	switch (nObjs) {
 		case 0: return 0; // No targets, no collisions
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
@@ -362,7 +362,7 @@ var noFilter = is_undefined(suchthatFunc);
 
 // Array for targets
 if (is_array(objs)) {
-	var nObjs = array_length_1d(objs);
+	var nObjs = array_length(objs);
 	switch (nObjs) {
 		case 0: return noone; // No targets, no collisions
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
@@ -447,7 +447,7 @@ var noFilter = is_undefined(suchthatFunc);
 
 // Array for targets
 if (is_array(objs)) {
-	var nObjs = array_length_1d(objs);
+	var nObjs = array_length(objs);
 	switch (nObjs) {
 		case 0: return 0; // No targets, no collisions
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
@@ -511,7 +511,7 @@ var noFilter = is_undefined(suchthatFunc);
 
 // Array for targets
 if (is_array(objs)) {
-	var nObjs = array_length_1d(objs);
+	var nObjs = array_length(objs);
 	switch (nObjs) {
 		case 0: return noone; // No targets, no collisions
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
@@ -592,7 +592,7 @@ var noFilter = is_undefined(suchthatFunc);
 
 // Array for targets
 if (is_array(objs)) {
-	var nObjs = array_length_1d(objs);
+	var nObjs = array_length(objs);
 	switch (nObjs) {
 		case 0: return 0; // No targets, no collisions
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
@@ -660,7 +660,7 @@ var noFilter = is_undefined(suchthatFunc);
 
 // Array for targets
 if (is_array(objs)) {
-	var nObjs = array_length_1d(objs);
+	var nObjs = array_length(objs);
 	switch (nObjs) {
 		case 0: return noone; // No targets, no collisions
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
@@ -745,7 +745,7 @@ var noFilter = is_undefined(suchthatFunc);
 
 // Array for targets
 if (is_array(objs)) {
-	var nObjs = array_length_1d(objs);
+	var nObjs = array_length(objs);
 	switch (nObjs) {
 		case 0: return 0; // No targets, no collisions
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
@@ -811,7 +811,7 @@ var furthestInst = noone,
 
 // Array for targets
 if (is_array(objs)) {
-	var nObjs = array_length_1d(objs);
+	var nObjs = array_length(objs);
 	switch (nObjs) {
 		case 0: return noone; // No targets, no collisions
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
@@ -904,7 +904,7 @@ var nearestInst = noone,
 
 // Array for targets
 if (is_array(objs)) {
-	var nObjs = array_length_1d(objs);
+	var nObjs = array_length(objs);
 	switch (nObjs) {
 		case 0: return noone; // No targets, no collisions
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
@@ -991,7 +991,7 @@ var noFilter = is_undefined(suchthatFunc);
 
 // Array for targets
 if (is_array(objs)) {
-	var nObjs = array_length_1d(objs);
+	var nObjs = array_length(objs);
 	switch (nObjs) {
 		case 0: return noone; // No targets, no collisions
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
@@ -1070,7 +1070,7 @@ var noFilter = is_undefined(suchthatFunc);
 
 // Array for targets
 if (is_array(objs)) {
-	var nObjs = array_length_1d(objs);
+	var nObjs = array_length(objs);
 	switch (nObjs) {
 		case 0: return 0; // No targets, no collisions
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
@@ -1130,7 +1130,7 @@ var noFilter = is_undefined(suchthatFunc);
 
 // Array for targets
 if (is_array(objs)) {
-	var nObjs = array_length_1d(objs);
+	var nObjs = array_length(objs);
 	switch (nObjs) {
 		case 0: return noone; // No targets, no collisions
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
@@ -1205,7 +1205,7 @@ var noFilter = is_undefined(suchthatFunc);
 
 // Array for targets
 if (is_array(objs)) {
-	var nObjs = array_length_1d(objs);
+	var nObjs = array_length(objs);
 	switch (nObjs) {
 		case 0: return 0; // No targets, no collisions
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
@@ -1265,7 +1265,7 @@ var noFilter = is_undefined(suchthatFunc);
 
 // Array for targets
 if (is_array(objs)) {
-	var nObjs = array_length_1d(objs);
+	var nObjs = array_length(objs);
 	switch (nObjs) {
 		case 0: return false; // No targets, no collisions
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
@@ -1339,7 +1339,7 @@ var noFilter = is_undefined(suchthatFunc);
 
 // Array for targets
 if (is_array(objs)) {
-	var nObjs = array_length_1d(objs);
+	var nObjs = array_length(objs);
 	switch (nObjs) {
 		case 0: return false; // No targets, no collisions
 		case 1: objs = objs[0]; break; // Reduce to single target; pass to next if
