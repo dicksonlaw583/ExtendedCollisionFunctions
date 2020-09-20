@@ -4,7 +4,4 @@
 ///@param val
 function valueEqualTo() {
 	return argument[0].value == argument[2];
-
-
-
 }

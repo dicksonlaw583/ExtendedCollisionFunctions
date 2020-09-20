@@ -7,7 +7,4 @@ function ds_list_to_array(argument0) {
 		arr[i] = argument0[| i];
 	}
 	return arr;
-
-
-
 }

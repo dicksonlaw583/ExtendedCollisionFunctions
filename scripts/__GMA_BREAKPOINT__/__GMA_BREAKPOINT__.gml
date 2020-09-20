@@ -8,7 +8,8 @@ function __GMA_BREAKPOINT__(message, got, expected) {
 	var __GMA_MY_BREAKPOINT__ = true;
   
 	/* Additional assertion failure handling behaviours here */
-  
+	global.__test_fails__++;
+	
 	// Return true to bypass error popup, false otherwise
 	return false;
 }
