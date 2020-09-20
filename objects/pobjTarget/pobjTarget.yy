@@ -21,8 +21,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "ExtendedCollisionFunctions_test",
-    "path": "folders/Objects/ExtendedCollisionFunctions_test.yy",
+    "name": "Placeholders",
+    "path": "folders/Libraries_test/ExtendedCollisionFunctions_test/Placeholders.yy",
   },
   "resourceVersion": "1.0",
   "name": "pobjTarget",

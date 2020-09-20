@@ -22,7 +22,7 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_43597BF0","path":"rooms/rmTest/rmTest.yy",},
+    {"name":"inst_43597BF0","path":"rooms/rm_extended_collision_functions_test/rm_extended_collision_functions_test.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
@@ -47,10 +47,10 @@
   },
   "parent": {
     "name": "ExtendedCollisionFunctions_test",
-    "path": "folders/Rooms/ExtendedCollisionFunctions_test.yy",
+    "path": "folders/Libraries_test/ExtendedCollisionFunctions_test.yy",
   },
   "resourceVersion": "1.0",
-  "name": "rmTest",
+  "name": "rm_extended_collision_functions_test",
   "tags": [],
   "resourceType": "GMRoom",
 }

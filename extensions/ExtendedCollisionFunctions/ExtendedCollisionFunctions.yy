@@ -84,8 +84,8 @@
   "androidPermissions": [],
   "copyToTargets": -1,
   "parent": {
-    "name": "Extensions",
-    "path": "folders/Extensions.yy",
+    "name": "ExtendedCollisionFunctions",
+    "path": "folders/Libraries/ExtendedCollisionFunctions.yy",
   },
   "resourceVersion": "1.0",
   "name": "ExtendedCollisionFunctions",

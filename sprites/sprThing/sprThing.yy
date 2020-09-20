@@ -1,7 +1,6 @@
 {
   "bboxMode": 0,
   "collisionKind": 1,
-  "separateMasks": false,
   "type": 0,
   "origin": 4,
   "preMultiplyAlpha": false,
@@ -69,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"48d6ada6-406b-4a24-babd-516c3743f2ce","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "ExtendedCollisionFunctions_test",
-    "path": "folders/Sprites/ExtendedCollisionFunctions_test.yy",
+    "name": "Placeholders",
+    "path": "folders/Libraries_test/ExtendedCollisionFunctions_test/Placeholders.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprThing",

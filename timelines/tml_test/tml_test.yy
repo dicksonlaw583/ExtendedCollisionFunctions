@@ -22,7 +22,7 @@
   ],
   "parent": {
     "name": "ExtendedCollisionFunctions_test",
-    "path": "folders/Timelines/ExtendedCollisionFunctions_test.yy",
+    "path": "folders/Libraries_test/ExtendedCollisionFunctions_test.yy",
   },
   "resourceVersion": "1.0",
   "name": "tml_test",
