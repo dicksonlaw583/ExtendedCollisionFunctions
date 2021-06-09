@@ -3,5 +3,7 @@
 ///@param that
 ///@param val
 function valueEqualTo() {
-	return argument[0].value == argument[2];
+	var a0 = argument[0];
+	var a2 = argument[2];
+	return a0.value == a2;
 }

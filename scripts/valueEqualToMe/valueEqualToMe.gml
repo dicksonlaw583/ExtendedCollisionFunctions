@@ -2,5 +2,7 @@
 ///@param this
 ///@param that
 function valueEqualToMe() {
-	return argument[0].value == argument[1].value;
+	var a0 = argument[0];
+	var a1 = argument[1];
+	return a0.value == a1.value;
 }

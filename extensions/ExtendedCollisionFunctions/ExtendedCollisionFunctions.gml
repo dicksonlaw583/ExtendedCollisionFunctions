@@ -3,6 +3,7 @@
 ///@param id The ID of the instance
 ///@param objs Array of object identities
 for (var i = array_length(argument1)-1; i >= 0; --i) {
+	var _id = argument0;
 	var obji = argument1[i];
 	switch (obji) {
 		case all: return true;
@@ -16,7 +17,7 @@ for (var i = array_length(argument1)-1; i >= 0; --i) {
 			break;
 		*/
 		default:
-			if (argument0 == obji || (object_exists(obji) && (argument0.object_index == obji || object_is_ancestor(argument0.object_index, obji)))) return true;
+			if (argument0 == obji || (object_exists(obji) && (_id.object_index == obji || object_is_ancestor(_id.object_index, obji)))) return true;
 	}
 }
 return false;
