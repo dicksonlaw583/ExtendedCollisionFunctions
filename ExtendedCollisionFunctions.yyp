@@ -46,6 +46,7 @@
     {"name":"macOS","path":"options/mac/options_mac.yy",},
     {"name":"Android","path":"options/android/options_android.yy",},
     {"name":"Main","path":"options/main/options_main.yy",},
+    {"name":"operagx","path":"options/operagx/options_operagx.yy",},
   ],
   "isDnDProject": false,
   "isEcma": false,
@@ -76,7 +77,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.2.556",
+    "IDEVersion": "2.3.5.589",
   },
   "resourceVersion": "1.4",
   "name": "ExtendedCollisionFunctions",
