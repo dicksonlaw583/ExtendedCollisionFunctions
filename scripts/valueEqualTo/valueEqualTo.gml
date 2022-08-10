@@ -2,6 +2,6 @@
 ///@param this
 ///@param that
 ///@param val
-function valueEqualTo() {
-	return argument[0].value == argument[2];
+function valueEqualTo(this, that, val) {
+	return this.value == val;
 }
