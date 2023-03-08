@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMProject",
+  "resourceVersion": "1.6",
+  "name": "ExtendedCollisionFunctions",
   "resources": [
     {"id":{"name":"ecf_test_instance_furthest_ext","path":"scripts/ecf_test_instance_furthest_ext/ecf_test_instance_furthest_ext.yy",},"order":23,},
     {"id":{"name":"ecf_test_collision_circle_list_ext","path":"scripts/ecf_test_collision_circle_list_ext/ecf_test_collision_circle_list_ext.yy",},"order":18,},
@@ -38,7 +41,6 @@
   "Options": [
     {"name":"HTML5","path":"options/html5/options_html5.yy",},
     {"name":"Linux","path":"options/linux/options_linux.yy",},
-    {"name":"Windows UWP","path":"options/windowsuap/options_windowsuap.yy",},
     {"name":"Amazon Fire","path":"options/amazonfire/options_amazonfire.yy",},
     {"name":"Windows","path":"options/windows/options_windows.yy",},
     {"name":"iOS","path":"options/ios/options_ios.yy",},
@@ -58,28 +60,24 @@
     {"roomId":{"name":"rm_extended_collision_functions_test","path":"rooms/rm_extended_collision_functions_test/rm_extended_collision_functions_test.yy",},},
   ],
   "Folders": [
-    {"folderPath":"folders/Libraries_test/ExtendedCollisionFunctions_test.yy","order":0,"resourceVersion":"1.0","name":"ExtendedCollisionFunctions_test","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Libraries.yy","order":6,"resourceVersion":"1.0","name":"Libraries","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Libraries/GMAssert.yy","order":1,"resourceVersion":"1.0","name":"GMAssert","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Libraries_config.yy","order":7,"resourceVersion":"1.0","name":"Libraries_config","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Libraries_config/GMAssert.yy","order":1,"resourceVersion":"1.0","name":"GMAssert","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Libraries_test.yy","order":8,"resourceVersion":"1.0","name":"Libraries_test","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Libraries/ExtendedCollisionFunctions.yy","order":2,"resourceVersion":"1.0","name":"ExtendedCollisionFunctions","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Libraries_test/ExtendedCollisionFunctions_test/Placeholders.yy","order":0,"resourceVersion":"1.0","name":"Placeholders","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Libraries_test/ExtendedCollisionFunctions_test/Utilities.yy","order":2,"resourceVersion":"1.0","name":"Utilities","tags":[],"resourceType":"GMFolder",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Libraries_config","folderPath":"folders/Libraries_config.yy","order":7,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"GMAssert","folderPath":"folders/Libraries_config/GMAssert.yy","order":1,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Libraries_test","folderPath":"folders/Libraries_test.yy","order":8,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"ExtendedCollisionFunctions_test","folderPath":"folders/Libraries_test/ExtendedCollisionFunctions_test.yy","order":0,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Placeholders","folderPath":"folders/Libraries_test/ExtendedCollisionFunctions_test/Placeholders.yy","order":0,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Utilities","folderPath":"folders/Libraries_test/ExtendedCollisionFunctions_test/Utilities.yy","order":2,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Libraries","folderPath":"folders/Libraries.yy","order":6,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"ExtendedCollisionFunctions","folderPath":"folders/Libraries/ExtendedCollisionFunctions.yy","order":2,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"GMAssert","folderPath":"folders/Libraries/GMAssert.yy","order":1,},
   ],
   "AudioGroups": [
-    {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
+    {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},
   ],
   "TextureGroups": [
-    {"isScaled":true,"compressFormat":"bz2","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},
+    {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","isScaled":true,"compressFormat":"bz2","loadType":"default","directory":"","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,},
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.6.1.26",
+    "IDEVersion": "2022.0.0.19",
   },
-  "resourceVersion": "1.5",
-  "name": "ExtendedCollisionFunctions",
-  "tags": [],
-  "resourceType": "GMProject",
 }
