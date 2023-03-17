@@ -8,6 +8,7 @@
     {"id":{"name":"ecf_test_place_meeting_ext","path":"scripts/ecf_test_place_meeting_ext/ecf_test_place_meeting_ext.yy",},"order":6,},
     {"id":{"name":"ecf_test_position_meeting_ext","path":"scripts/ecf_test_position_meeting_ext/ecf_test_position_meeting_ext.yy",},"order":7,},
     {"id":{"name":"ecf_test_instance_place_ext","path":"scripts/ecf_test_instance_place_ext/ecf_test_instance_place_ext.yy",},"order":8,},
+    {"id":{"name":"ExtendedCollisionFunctions_internal","path":"scripts/ExtendedCollisionFunctions_internal/ExtendedCollisionFunctions_internal.yy",},"order":1,},
     {"id":{"name":"sprThing","path":"sprites/sprThing/sprThing.yy",},"order":5,},
     {"id":{"name":"ecf_test_collision_ellipse_list_ext","path":"scripts/ecf_test_collision_ellipse_list_ext/ecf_test_collision_ellipse_list_ext.yy",},"order":21,},
     {"id":{"name":"valueEqualTo","path":"scripts/valueEqualTo/valueEqualTo.yy",},"order":2,},
@@ -27,6 +28,7 @@
     {"id":{"name":"objTarget1","path":"objects/objTarget1/objTarget1.yy",},"order":0,},
     {"id":{"name":"ecf_test_instance_position_list_ext","path":"scripts/ecf_test_instance_position_list_ext/ecf_test_instance_position_list_ext.yy",},"order":16,},
     {"id":{"name":"ecf_test_all","path":"scripts/ecf_test_all/ecf_test_all.yy",},"order":5,},
+    {"id":{"name":"ExtendedCollisionFunctions","path":"scripts/ExtendedCollisionFunctions/ExtendedCollisionFunctions.yy",},"order":0,},
     {"id":{"name":"ecf_test_collision_point_ext","path":"scripts/ecf_test_collision_point_ext/ecf_test_collision_point_ext.yy",},"order":10,},
     {"id":{"name":"ecf_test_collision_line_ext","path":"scripts/ecf_test_collision_line_ext/ecf_test_collision_line_ext.yy",},"order":12,},
     {"id":{"name":"objTarget2","path":"objects/objTarget2/objTarget2.yy",},"order":1,},
@@ -36,7 +38,6 @@
     {"id":{"name":"ecf_test_collision_rectangle_list_ext","path":"scripts/ecf_test_collision_rectangle_list_ext/ecf_test_collision_rectangle_list_ext.yy",},"order":20,},
     {"id":{"name":"rm_extended_collision_functions_test","path":"rooms/rm_extended_collision_functions_test/rm_extended_collision_functions_test.yy",},"order":1,},
     {"id":{"name":"ecf_test_instance_place_list_ext","path":"scripts/ecf_test_instance_place_list_ext/ecf_test_instance_place_list_ext.yy",},"order":15,},
-    {"id":{"name":"ExtendedCollisionFunctions","path":"extensions/ExtendedCollisionFunctions/ExtendedCollisionFunctions.yy",},"order":0,},
   ],
   "Options": [
     {"name":"HTML5","path":"options/html5/options_html5.yy",},
