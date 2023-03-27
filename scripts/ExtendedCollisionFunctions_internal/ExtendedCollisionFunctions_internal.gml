@@ -3,6 +3,8 @@
 ///@func __instance_is_instance_of_any__(this, objs)
 ///@param {Id.Instance} this The ID of the instance
 ///@param {Array<Asset.GMObject,Id.Instance>} objs Array of object identities
+///@ignore
+///@desc (INTERNAL: Extended Collision Functions) Return whether the given instance counts as anything in objs.
 function __instance_is_instance_of_any__(this, objs) {
 	for (var i = array_length(objs)-1; i >= 0; --i) {
 		var obji = objs[i];
