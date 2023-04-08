@@ -12,7 +12,7 @@ If you are using GameMaker Studio 2.2.5 or below, please use [v1.0.0](https://gi
 
 ## Installation
 
-Download the latest version from [the Release Pages](https://github.com/dicksonlaw583/ExtendedCollisionFunctions/releases) or [the YoYo Marketplace](https://marketplace.yoyogames.com/assets/9091/extended-collision-functions).
+Download the latest version from [the Release Pages](https://github.com/dicksonlaw583/ExtendedCollisionFunctions/releases).
 
 ## Contributing to Extended Collision Functions
 
